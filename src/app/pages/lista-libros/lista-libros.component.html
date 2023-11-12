@@ -1,0 +1,37 @@
+<div class="container">
+
+  <h1 class="text-center">Lista de Viajes</h1>
+  <br>
+  <br>
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Estante</th>
+        <th scope="col">Año</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Autor</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of listaLibro">
+        <th>{{row.codigo}}</th>
+        <td>{{row.estante}}</td>
+        <td>{{row.anio}}</td>
+        <td>{{row.cantidad}}</td>
+        <td>{{row.titulo}}</td>
+        <td>{{row.autor.nombres}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" (click)="editar(row.codigo)">Editar</button> 
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger"  (click)="eliminar(row.codigo)">Eliminar</button>
+        </td>        
+      </tr>
+    </tbody>
+  </table>
+</div>

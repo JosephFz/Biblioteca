@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h1 class="text-center">Lista de Autores</h1>
+    <br>
+    <br>
+  
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Nacionalidades</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of listaAutor">
+          <th>{{row.codigo}}</th>
+          <td>{{row.nombres}}</td>
+          <td>{{row.nacionalidad}}</td>
+          <td>
+            <button type="button" class="btn btn-warning" (click)="editar(row.codigo)">Editar</button> 
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger"  (click)="eliminar(row.codigo)">Eliminar</button>
+          </td>        
+        </tr>
+      </tbody>
+    </table>
+  </div>
