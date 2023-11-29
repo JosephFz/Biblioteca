@@ -12,6 +12,10 @@ import { ListarAutorComponent } from './pages/listar-autor/listar-autor.componen
 import { NuevoAutorComponent } from './pages/nuevo-autor/nuevo-autor.component';
 import { ListaCategoriaComponent } from './pages/lista-categoria/lista-categoria.component';
 import { NuevoCategoriaComponent } from './pages/nuevo-categoria/nuevo-categoria.component';
+import { ListaLocalizacionComponent } from './pages/lista-localizacion/lista-localizacion.component';
+import { NuevaLocalizacionComponent } from './pages/nueva-localizacion/nueva-localizacion.component';
+import { ListaEditorialComponent } from './pages/lista-editorial/lista-editorial.component';
+import { NuevaEditorialComponent } from './pages/nueva-editorial/nueva-editorial.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { NuevoCategoriaComponent } from './pages/nuevo-categoria/nuevo-categoria
     ListarAutorComponent,
     NuevoAutorComponent,
     ListaCategoriaComponent,
-    NuevoCategoriaComponent
+    NuevoCategoriaComponent,
+    ListaLocalizacionComponent,
+    NuevaLocalizacionComponent,
+    ListaEditorialComponent,
+    NuevaEditorialComponent
   ],
   imports: [
     BrowserModule,

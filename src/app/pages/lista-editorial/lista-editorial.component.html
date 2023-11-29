@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 class="text-center">Lista de Categorías</h1>
+    <h1 class="text-center">Lista de Editoriales</h1>
     <br>
     <br>
   
@@ -8,13 +8,13 @@
       <thead>
         <tr>
           <th scope="col">Codigo</th>
-          <th scope="col">Nombre</th>
+          <th scope="col">Editoriales</th>
           <th>Editar</th>
           <th>Eliminar</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let row of listaCategorias">
+        <tr *ngFor="let row of listaEditorial">
           <th>{{row.codigo}}</th>
           <td>{{row.nombre}}</td>
           <td>

@@ -1,0 +1,78 @@
+<div class="container">
+
+    <h1 class="text-center">Registrar Usuario</h1>
+
+    <!-- El formGroup sirve para vincular nuestra etiqueta formulario del nuevo-auto.component.ts creado -->
+    <form [formGroup]="formulario">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Codigo</label>
+            <!-- "formControlName" trabaja con el ts  "descripcion:[,[Validators.required]]" tiene que tener el mismo nombre inscrito ahí fila 38 -->
+            <input type="text" class="form-control" name="codigo" formControlName="codigo" 
+            [ngClass]="{'is-invalid': estado && formulario.controls['codigo'].errors}">
+            <div *ngIf="estado && formulario.controls['codigo'].hasError('required')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['codigo'].hasError('required')" >Ingresar el codigo</div>
+            </div>
+
+            <div *ngIf="estado && formulario.controls['codigo'].hasError('pattern')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['codigo'].hasError('pattern')" >Min: 3 and Max:15</div>
+            </div>
+            
+
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+            <input type="text" class="form-control" name="apellido" formControlName="apellido"  
+            [ngClass]="{'is-invalid': estado && formulario.controls['apellido'].errors}">
+
+            <div *ngIf="estado && formulario.controls['apellido'].hasError('required')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['apellido'].hasError('required')" >Ingresar apellido</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Contraseña</label>
+            <input type="text" class="form-control" name="password" formControlName="password" 
+            [ngClass]="{'is-invalid': estado && formulario.controls['password'].errors}">
+
+            <div *ngIf="estado && formulario.controls['password'].hasError('required')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['password'].hasError('required')" >Ingresar contraseña</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+            <input type="text" class="form-control" name="login" formControlName="login" 
+            [ngClass]="{'is-invalid': estado && formulario.controls['login'].errors}">
+
+            <div *ngIf="estado && formulario.controls['login'].hasError('required')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['login'].hasError('required')" >Ingresar Nombre</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" formControlName="nombre" 
+            [ngClass]="{'is-invalid': estado && formulario.controls['nombre'].errors}">
+
+            <div *ngIf="estado && formulario.controls['nombre'].hasError('required')" class="invalid-feedback" >
+                <div *ngIf="formulario.controls['nombre'].hasError('required')" >Ingresar el Nombre</div>
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Rol</label>
+            <select class="form-select" formControlName="rol" name="rol">
+                <!-- [ngValue]  04/10/2023-->
+                <option [ngValue]="row" *ngFor="let row of listaAutor">{{row.nombres}}</option>
+              </select>
+        </div>
+
+        
+        <button type="button" class="btn btn-primary" (click)="grabarDatos()">Enviar</button>
+        
+      </form>
+
+
+</div>

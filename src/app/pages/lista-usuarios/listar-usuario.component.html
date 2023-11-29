@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h1 class="text-center">Lista de Categorías</h1>
+    <h1 class="text-center">Lista de Usuarios</h1>
     <br>
     <br>
   
@@ -8,15 +8,21 @@
       <thead>
         <tr>
           <th scope="col">Codigo</th>
+          <th scope="col">Nombre Usuario</th>
           <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Rol</th>
           <th>Editar</th>
           <th>Eliminar</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let row of listaCategorias">
+        <tr *ngFor="let row of listaUsuario">
           <th>{{row.codigo}}</th>
+          <td>{{row.login}}</td>
           <td>{{row.nombre}}</td>
+          <td>{{row.apellido}}</td>
+          <td>{{row.rol}}</td>
           <td>
             <button type="button" class="btn btn-warning" (click)="editar(row.codigo)">Editar</button> 
           </td>
@@ -27,4 +33,3 @@
       </tbody>
     </table>
   </div>
-

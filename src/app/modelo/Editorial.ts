@@ -1,13 +1,9 @@
-export class Localizacion{
+export class Editorial{
     codigo:number
-    estante:string
-    nivel:string
-    seccion:string
+    nombre:string
 
-    constructor(codigo:number, estante:string, nivel:string, seccion:string){
+    constructor(codigo:number, nombre:string){
         this.codigo = codigo
-        this.estante = estante
-        this.nivel = nivel
-        this.seccion = seccion
+        this.nombre = nombre
     }
 }

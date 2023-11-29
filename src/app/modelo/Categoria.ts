@@ -1,4 +1,4 @@
-export class Localizacion{
+export class Categoria{
     codigo:number
     nombre:string
 
